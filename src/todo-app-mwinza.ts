@@ -26,6 +26,27 @@ async function main() {
     console.log("==========================================\n\n")
 
     printList(actions);
+
+    let input = await rl.question("PICK AN OPTION: ");
+
+    switch (input) {
+      case '1':
+        addTask();
+        break;
+      case '2':
+        viewTasks();
+        break;
+      case '3':
+        markAsComplete();
+        break;
+      case '5':
+        exit();
+        break
+      default:
+        console.clear;
+        console.log('ENTER A VALID OPTION! (1 - 5)');
+        main()
+    }
   }
 }
 
