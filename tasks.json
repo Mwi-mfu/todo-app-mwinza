@@ -1,0 +1,16 @@
+{
+  "tasks": [
+    {
+      "name": "Clean the house (DONE)",
+      "completed": true
+    },
+    {
+      "name": "Go to bed after writing this spaghetti code",
+      "completed": false
+    },
+    {
+      "name": "Learn regex (DONE)",
+      "completed": true
+    }
+  ]
+}

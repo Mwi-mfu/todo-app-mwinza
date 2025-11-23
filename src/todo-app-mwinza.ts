@@ -22,6 +22,7 @@ let active: boolean = true;
 await db.read;
 
 async function main() {
+  console.clear();
   const actions: Array<string> = ['Add task', 'View tasks', 'Mark task as completed', 'Delete task', 'Exit'];
     console.log("==========================================")
     console.log("                TO DO LIST")
@@ -37,8 +38,7 @@ async function main() {
         addTask();
         break;
       case '2':
-        viewTasks();
-        main();
+        viewTasksOnly();
         break;
       case '3':
         markAsComplete();
@@ -65,7 +65,6 @@ function printListTyped(list: Array<taskBody>): void {
   let end: number = list.length;
   for (let element of list) {
     console.log(`${index}. ${element.name}`);
-
     index += 1;
   }
 }
@@ -97,21 +96,38 @@ async function addTask() {
 
 
 async function viewTasks() {
+  console.clear();
   console.log("====================================================");
   console.log("                THESE ARE YOUR TASKS");
   console.log("====================================================");
 
   if (todoList.length === 0) {
     console.log('NO TASKS\n');
+    main();
   } else {
     printListTyped(todoList);
   }
 }
 
 
+async function viewTasksOnly() {
+  console.clear();
+  console.log("====================================================");
+  console.log("                THESE ARE YOUR TASKS");
+  console.log("====================================================");
+
+  if (todoList.length === 0) {
+    console.log('NO TASKS\n');
+    main();
+  } else {
+    printListTyped(todoList);
+    main();
+  }
+}
+
+
 async function markAsComplete() {
   viewTasks();
-  
   if (todoList.length > 0) {
     let elementToComplete = await rl.question("Which task do you want to mark as complete? ");
     const finalElement: number = todoList.length - 1;
