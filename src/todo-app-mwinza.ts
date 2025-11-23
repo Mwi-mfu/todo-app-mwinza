@@ -22,7 +22,6 @@ let active: boolean = true;
 await db.read;
 
 async function main() {
-  console.clear();
   const actions: Array<string> = ['Add task', 'View tasks', 'Mark task as completed', 'Delete task', 'Exit'];
     console.log("==========================================")
     console.log("                TO DO LIST")
