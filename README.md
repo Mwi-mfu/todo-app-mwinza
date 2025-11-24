@@ -1,5 +1,5 @@
 # TODO-APP-MWINZA  
-**DESCRIPTION**
+**DESCRIPTION**  
 This is a command line application written in typescript used to keep track of tasks and their completion states.    
 
 **HOW TO RUN**  
@@ -33,4 +33,5 @@ This is a command line application written in typescript used to keep track of t
 <img width="795" height="291" alt="main_menu" src="https://github.com/user-attachments/assets/88c1ef21-79fe-4fe6-a2f1-2543cc85672a" />  
 <img width="592" height="104" alt="listTasks" src="https://github.com/user-attachments/assets/d2f5efc6-fd1f-4f25-b90c-406867247f96" />  
 <img width="445" height="142" alt="markAsComplete" src="https://github.com/user-attachments/assets/36c0334b-d7c2-4485-adc9-a563827a76cd" />  
+
 
